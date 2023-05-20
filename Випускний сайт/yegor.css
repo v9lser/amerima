@@ -1,0 +1,84 @@
+
+header{
+	height: 200px;
+	background-color: lightcoral;
+}
+#menu{
+	width: 20%;
+
+	background-color: lightcyan;
+	float: left;
+}
+
+#content{
+	width: 80%;
+	
+	
+	float: left;
+}
+footer{
+	height: 500px;
+	background-color: black;
+	clear: both;
+	text-align: center;
+}
+h2{
+    text-align: center;
+}
+.bgvideo{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bgvideo video{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	z-index: 1;
+}
+.textvideo{
+z-index: 2;
+color: #fff;
+}
+
+
+/* CSS */
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+ margin-left: 20px;
+ margin-bottom: 10px;
+  max-width: 80%;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
+}

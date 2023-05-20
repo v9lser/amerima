@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Практика на if else</title>
+	<style type="text/css">
+		div{
+			font-size: 50px; 
+			color: green;
+			text-align: center;
+		}
+		.sq{
+			width: 50px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+		.btn{
+			width: 250px;
+			height: 50px;
+			font-size: 36px;
+			color: purple;
+		}
+
+	</style>
+</head>
+<body>
+	<script>
+	function triangle() {
+  let a = +document.tr.a.value;
+  let b = +document.tr.b.value;
+  let c = +document.tr.c.value;
+  let sol = document.getElementById("tr_sol");
+  
+if (a<=0||b<=0||c<=0||(a+b)<=c||(a+c)<=b||(b+c)<=a){
+    string="Трикутника не існує"
+}else{
+let P=a+b+c;
+let p=P/2;
+let S=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+string="Периметр трикутника дорівнює " +P+"<br>"+"Площа трикутника дорівнює " +S
+}
+	  sol.innerHTML = string;
+}
+
+	</script>
+	<div>
+<p>Знаходження периметру та площі трикутника</p>
+<form name="tr" action="javascript:triangle()">
+a <input class="sq" name="a" type="text" value="3" size="4">
+b <input class="sq"  name="b" type="text" value="4" size="4">
+c <input class="sq"  name="c" type="text" value="5" size="4">
+<input class="btn" type="submit" value="Розрахувати">
+<input class="btn" type="reset" name="reset" value="Скинути">
+</form>
+Рішення: <span id="tr_sol">Введить сторони трикутника та натисніть "Розрахувати"</span>
+</div>
+</body>
+</html>

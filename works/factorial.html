@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Факторіал</title>
+</head>
+<body>
+  <style>
+    body{
+    }
+    p{
+      text-align: center;
+      font-size: 50px;
+      color: black;
+    }
+    .p1{
+      text-align: center;
+      font-size: 30px;
+      color:black
+    }
+    input{
+      text-align: center;
+      margin-left: 600px;
+      height: 30px;
+      border-radius: 40%;
+      font-size: 16px;
+    }
+      span{
+      color: black
+      margin-left: 640px;
+      margin-top: 100px;
+      text-align: center;
+      font-size: 25px;
+    }
+    
+  </style>
+  <p>Введіть значення факторіала</p>
+  <input type="text" class="field__form__input" onkeypress='validate(event)'/>
+  <button class="field__form__btn">Ok</button>
+  <br>
+  <span class="result__check__label"><br></span>
+  <br>
+  <p  class="p1">Добуток всіх натуральних чисел від 1 до 𝑛 називається факторіалом числа n і записується 𝑛! (читається, як "ен факторіалом»).
+    𝑛!=1⋅2⋅3⋅...⋅(𝑛−2)⋅(𝑛−1)⋅𝑛</p>
+  <script>
+  let input = document.querySelector(".field__form__input");
+  let btn = document.querySelector(".field__form__btn");
+  let result = document.querySelector(".result__check__label");
+  
+  let myString = " "
+  
+  btn.onclick = function (evt) {
+    evt.preventDefault();
+    let number = parseInt(input.value)
+    
+    myString = (number + "! = ")
+    let resultString = (factorial(number))
+    myString += resultString
+    result.innerHTML = myString    
+    }
+  function factorial(n){
+    if (n==1){ 
+      myString += ( n + " = ")
+      return 1;
+    }
+    
+    myString+= ( n + " * ");
+    return n*factorial(n-1)
+    		
+    }
+
+    function validate(evt) {
+  var theEvent = evt || window.event;
+
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]/;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+  </script>
+</body>
+</html>

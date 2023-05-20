@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <p>Ми вивчаємо JavaScript</p>
+    <script>
+let min=+prompt ('min number',0)
+let max=+prompt ('max number',100) 
+let counter=1;
+let numUser; 
+let numX=Math.round(min+Math.random()*(max-min));
+ do { numUser = prompt("вгадайте число від 0 до 100", 0); 
+ counter++;
+if (numUser===null) { 
+alert("Ми чекали від Вас число");
+} else if (+numUser<numX) { 
+alert("Ваше число менше"); 
+} else if (+numUser>numX){
+alert("Ваше число більше"); 
+} else if(+numUser==numX){ 
+alert("Ура!!! Вгадали!!! "+numX+" кількість спроб: "+counter); } 
+else{
+    alert("Ви ввели не число!")
+}
+} while (numUser != numX && numUser != null);
+
+
+
+
+
+
+    </script>
+</body>
+</html>

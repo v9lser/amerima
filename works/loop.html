@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Loop</title>
+    <style>
+        body{
+            font-size: 32px;
+            color: yellow;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+       /* let number=+prompt("How many greetings do you want?",100)
+        let count;     
+for (count = 0; count < number; ++count){ 
+    document.writeln("Glory to Ukraine!"+"<br>");
+}
+document.writeln("Glory to Heroes!" +count+ " times")
+let min=+prompt("Введіть мінімальне число діапазону",0)
+let max=+prompt("Введіть мінімальне число діапазону",100)
+let sum=0;
+for (let count = min; count <= max; count++){
+    sum+=count
+}
+document.write(`Сума чисел в діапазоні  від ${min} до ${max} дорівнює ${sum}`)
+let sum = 0;
+while (true) {
+  let value = +prompt('Введіть число', '');
+  if (!value) break; 
+  sum += value;
+}
+alert( 'Сума: ' + sum );*/
+let num;
+do {
+  num = prompt("Введіть число, більше за 100?", 0);
+} while (num <= 100 && num!=null);
+if (num===null){
+	alert("До побачення!")
+}else{
+alert ("Ваше число: " + num)
+}
+
+    </script>
+</body>
+</html>
